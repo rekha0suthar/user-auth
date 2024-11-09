@@ -19,7 +19,7 @@ const Login = () => {
     const newUser = { username: username, password: password, role: role };
     try {
       const response = await axios.post(
-        'https://role-auth-backend.vercel.app/api/user/login',
+        'https://user-auth-backend-rekha0suthars-projects.vercel.app/api/user/login',
         newUser,
         {
           headers: {
@@ -41,7 +41,7 @@ const Login = () => {
   const fetchUserDetail = async (userId) => {
     try {
       const response = await axios.get(
-        `https://role-auth-backend.vercel.app/api/user/${userId}` /// get api to fetch user detail
+        `https://user-auth-backend-rekha0suthars-projects.vercel.app/api/user/${userId}` /// get api to fetch user detail
       );
       if (role === 'admin') {
         /// receiving and storing different responses based on user role
